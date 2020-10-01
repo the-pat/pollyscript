@@ -1,8 +1,8 @@
-const test = require('ava');
+const test = require("ava");
 
-const {hello} = require('../dist/pollyscript');
+const { hello } = require("../dist/pollyscript");
 
-test('`hello()` returns `Hello 🗺️!`', t => {
+test("`hello()` returns `Hello 🗺️!`", (t) => {
   const result = hello();
 
   t.is(result, `Hello 🗺️!`);
