@@ -14,9 +14,11 @@ export default abstract class Policy extends PolicyBase {
     super(policyBuilder);
   }
 
-  public execute<TResult>(action: Action<TResult>): TResult {
+  public execute<TResult>(action: Action<TResult>): TResult | null {
     return this.implementation(action);
   }
 
-  protected abstract implementation<TResult>(action: Action<TResult>): TResult;
+  protected abstract implementation<TResult>(
+    action: Action<TResult>
+  ): TResult | null;
 }

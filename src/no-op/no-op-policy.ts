@@ -8,7 +8,7 @@ export default class NoOpPolicy extends Policy {
     super(policyBuilder);
   }
 
-  protected implementation<TResult>(action: Action<TResult>): TResult {
+  protected implementation<TResult>(action: Action<TResult>): TResult | null {
     return NoOpEngine.implementation(action);
   }
 }
